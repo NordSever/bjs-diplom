@@ -41,6 +41,6 @@ class UserForm {
   getData(form) {
     const login = form.querySelector('[name="email"]').value;
     const password = form.querySelector('[name="password"]').value;
-    return { login, password };
+    return { login, password }; 
   }
 }
