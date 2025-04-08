@@ -72,9 +72,9 @@ favoritesWidget.addUserCallback = data => ApiConnector.addUserToFavorites(data, 
     favoritesWidget.clearTable();
     favoritesWidget.fillTable(response.data);
     moneyManager.updateUsersList(response.data);
-    moneyManager.setMessage(true,'Пользователь успешно добавлен');
+    favoritesWidget.setMessage(true,'Пользователь успешно добавлен');
   }else {
-    moneyManager.setMessage(false, response.error);
+    favoritesWidget.setMessage(false, response.error);
   }
 })
 
@@ -83,9 +83,9 @@ favoritesWidget.removeUserCallback = (id) => ApiConnector.removeUserFromFavorite
     favoritesWidget.clearTable();
     favoritesWidget.fillTable(response.data);
     moneyManager.updateUsersList(response.data);
-    moneyManager.setMessage(true,'Пользователь удалён');
+    favoritesWidget.setMessage(true,'Пользователь удалён');
   }else {
-    moneyManager.setMessage(false, response.error);
+    favoritesWidget.setMessage(false, response.error);
   }
 });    
 
